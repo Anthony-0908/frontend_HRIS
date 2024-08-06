@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.my-component {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    /* ... other colors */
+}
+
+.dark-theme {
+    --primary-color: #dc3545;
+    --secondary-color: #adb5bd;
+    /* ... other colors */
+}
