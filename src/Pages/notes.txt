@@ -1,0 +1,5 @@
+rafce arrow function 
+
+<Outlet />  {/* This will render the nested routes like admin/login */}
+
+in order to render the page 

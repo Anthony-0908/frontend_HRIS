@@ -1,31 +1,38 @@
-import React from 'react'
-import { createBrowserRouter, Outlet } from 'react-router-dom'
-import AdminLayout from '../Layouts/AdminLayout'
-import UserLayout from '../Layouts/UserLayout'
+import React from 'react';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import AdminLayout from '../Layouts/AdminLayout';
+import UserLayout from '../Layouts/UserLayout';
+import Login from '../Pages/Admin/Login';
 
-const Routes = createBrowserRouter([
-    {
-        path:'/',
-        element: <Outlet/>,
-        children:[
-            {
-                path:'Admin',
-                element:<AdminLayout/>,
-                children:[
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Outlet />,
+    children: [
+      {
+        path: 'admin',
+        element: <AdminLayout />,
+        children: [
+          {
+            path: 'login',
+            element: <Login />,
+          },
+          // {
+          //   path: 'dashboard',
+          //   element: <AdminDashboard />,
+          // },
+        ],
+      },
+      {
+        path: 'user',
+        element: <UserLayout />,
+        children: [
+          // User routes
+        ],
+      },
+    ],
+  },
+]);
 
-                ],
-            },
 
-            {
-                path:'/User',
-                element:<UserLayout/>,
-                children:[
-
-                ]
-            }
-        ]
-        
-    }
-])
-
-export default Routes
+export default router

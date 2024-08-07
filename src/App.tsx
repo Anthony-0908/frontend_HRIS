@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouterProvider } from 'react-router-dom';
-import Routes from './Router/Routes';
+import router from './Router/Routes';
 import './index.css';
 
 const App: React.FC = () => {
@@ -28,7 +28,7 @@ const App: React.FC = () => {
 
     <>
       <div className="App">
-        <RouterProvider router={Routes} />
+        <RouterProvider router={router} />
       </div>
     </>
   );
